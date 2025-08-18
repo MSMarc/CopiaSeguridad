@@ -11,7 +11,7 @@ print("CARPETA_BACKUP_BASE:", os.getenv("CARPETA_BACKUP_BASE"))
 
 CARPETAS_ORIGEN = [os.path.expandvars(p) for p in os.getenv("CARPETAS_ORIGEN", "").split(";")]
 EXCLUIR_CARPETAS = ['venv']
-CARPETA_BACKUP_BASE = os.getenv("CARPETA_BACKUP_BASE", "D:\\Backups")
+CARPETA_BACKUP_BASE = os.getenv("CARPETA_BACKUP_BASE", "M:\CopiaSeguridad")
 
 logging.basicConfig(filename='backup_service.log', level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
