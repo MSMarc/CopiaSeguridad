@@ -23,6 +23,8 @@ def copiar_carpeta(origen, destino):
         destino_dir = os.path.join(destino, ruta_relativa)
         os.makedirs(destino_dir, exist_ok=True)
         for archivo in files:
+            if archivo.lower() == "desktop.ini":
+                continue
             origen_archivo = os.path.join(root, archivo)
             destino_archivo = os.path.join(destino_dir, archivo)
             if not os.path.exists(destino_archivo) or \
